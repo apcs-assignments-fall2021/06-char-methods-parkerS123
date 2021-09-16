@@ -32,14 +32,12 @@ public class MyMain {
     public static String removeNumbers(String str) {
         // int str_length = length(str);
         String New_str = "";
-        for (int i = 0; i < str.length() - 1; i++) {
-            if (str.charAt(i) >= 'A' && str.charAt(i) <= 'Z'||str.charAt(i) >= 'a' && str.charAt(i) <= 'z') {
-                i += 1;
+        for (int i = 0; i < str.length(); i++) {
+            if (!(str.charAt(i) >= '0' && str.charAt(i) <= '9')) {              //(str.charAt(i) >= 'A' && str.charAt(i) <= 'Z'||str.charAt(i) >= 'a' && str.charAt(i) <= 'z') {
                 New_str = New_str + str.charAt(i);
             }
             else{
-                New_str = New_str + str.replaceFirst(String.valueOf(str.charAt(i)),"");
-                i += 1;
+
             }
 
 
